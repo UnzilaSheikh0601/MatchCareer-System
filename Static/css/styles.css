@@ -18,9 +18,9 @@ body {
 :root {
   scroll-behavior: smooth;
 
-  --primary: #2b2d42;
+  /* --primary: #2b2d42;
   --secondary: #edf2f4;
-  --tertiary: #8d99ae;
+  --tertiary: #8d99ae; */
 }
 
 /* Navbar */
@@ -537,9 +537,9 @@ body {
   text-align: left;
 }
 
-.job-outline{
+/* .job-outline{
   
-}
+} */
 
 .job-details-block{
   display: flex;
