@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerPath AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h1 class="logo">CareerPath AI</h1>
+
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="{{ url_for('index') }}" class="{{ 'active' if request.endpoint == 'index' else '' }}">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('jobs') }}" class="{{ 'active' if request.endpoint == 'jobs' else '' }}">
+            Find Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('skills') }}" class="{{ 'active' if request.endpoint == 'skills' else '' }}">
+            Find Jobs
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('dashboard') }}" class="{{ 'active' if request.endpoint == 'dashboard' else '' }}">
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('about') }}" class="{{ 'active' if request.endpoint == 'about' else '' }}">
+            About
+          </a>
+        </li>
+      </ul>
+      <button class="sign-btn">Sign Up / Login</button>
+    </nav>
+
+    <div class="main-content">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Bridge the gap between your skills and your dream job</h1>
+          <p>Find what you need, learn what you miss, and track your journey to success.</p>
+
+          <a href="#start-cont">
+            <button class="hero-btn">Get Started</button>
+          </a>
+        </div>
+
+        <!-- Down image fixed at bottom -->
+        <div class="hero-down">
+            <h2>Start mapping your career</h2>
+            <h4>Discover your path below</h4>
+        </div>
+      </section>
+
+      <!-- Job-Skill Mapping -->
+      <section class="mapping">
+        <h2>
+          Map Your Job-Skills.<br />
+          Match Your Dream Job.
+        </h2>
+        <p class="mapping-sub">
+          Discover what skills your desired job needs and track your progress to achieve it.
+        </p>
+
+        <div class="mapping-grid">
+          <div class="card">
+            <div class="card-head">
+              <i>Job → Skills</i>
+            </div>
+
+            <h4>Find Skills for Any Job</h4>
+
+            <p class="card-desc">
+              Enter a job title and instantly see the skills employers expect.
+            </p>
+
+            <p class="card-hint">Perfect for career planning</p>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <i>Skills → Jobs</i>
+            </div>
+
+            <h4>Turn Skills into Job Options</h4>
+
+            <p class="card-desc">
+              Enter your skills and discover roles where you already fit.
+            </p>
+
+            <p class="card-hint">Great for freshers and switchers</p>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <i>Skill Gap Analysis</i>
+            </div>
+
+            <h4>Know What You’re Missing</h4>
+
+            <p class="card-desc">
+              See which skills you lack and what to learn next.
+            </p>
+
+            <p class="card-hint">No more guessing</p>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <i>Progress Tracking</i>
+            </div>
+
+            <h4>Track Your Growth</h4>
+
+            <p class="card-desc">
+              Monitor your skill progress and stay focused on your goal.
+            </p>
+
+            <p class="card-hint">Visual and simple</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Get Started Content -->
+      <section id="start-cont" class="start-content">
+        <h2>Search & Explore.</h2>
+        <p class="subtext">Choose how you want to start</p>
+        <div class="start-container">
+          <div class="start-box">
+            <div><a href="{{ url_for('jobs') }}" class="st-btn">Find Skills</a></div>
+            <p>Enter a job title</p>
+            <p>Know What Skills Your Dream Job Needs</p>
+          </div>
+          <div class="start-box">
+            <div><a href="{{ url_for('skills') }}" class="st-btn">Find Jobs</a></div>
+            <p>Enter your skills</p>
+            <p>Turn Your Skills into Job Opportunities</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p class="footer-logo">CareerPath AI</p>
+      <p id="year-text">© 2025</p>
+      <div class="socials">
+        <a href="#">💼</a>
+        <a href="#">🔗</a>
+        <a href="#">✉️</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

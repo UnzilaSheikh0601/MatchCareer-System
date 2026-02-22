@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | CareerPath AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h1 class="logo">CareerPath AI</h1>
+      <ul class="nav-links">
+        <li>
+          <a href="{{ url_for('index') }}" class="{{ 'active' if request.endpoint == 'index' else '' }}">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('jobs') }}" class="{{ 'active' if request.endpoint == 'jobs' else '' }}">
+            Find Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('skills') }}" class="{{ 'active' if request.endpoint == 'skills' else '' }}">
+            Find Jobs
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('dashboard') }}" class="{{ 'active' if request.endpoint == 'dashboard' else '' }}">
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('about') }}" class="{{ 'active' if request.endpoint == 'about' else '' }}">
+            About
+          </a>
+        </li>
+      </ul>
+      <button class="sign-btn">Sign Up / Login</button>
+    </nav>
+
+    <div class="main-content">
+      <section class="page-header">
+        <h2>About CareerPath AI</h2>
+        <p>Our mission is to bridge the gap between skills and opportunities using AI-powered insights.</p>
+      </section>
+
+      <section class="content">
+        <div class="about-text">
+          <p>
+            CareerPath AI helps students and professionals identify missing skills,
+            map job roles, and plan their learning journey with clarity.
+          </p>
+          <p>
+            Whether you are exploring a new career or upskilling for your next role,
+            the platform gives you structured, data-driven direction instead of guesswork.
+          </p>
+        </div>
+      </section>
+
+      <section class="content dark-section">
+        <h3>What CareerPath AI Helps You Do?</h3>
+        <ul class="about-features">
+          <li>🔍 Discover job roles that match your current skills</li>
+          <li>🧠 Identify missing skills required for your target role</li>
+          <li>📊 Track your learning and career progress visually</li>
+        </ul>
+      </section>
+
+      <section class="content">
+        <h3>Why CareerPath AI?</h3>
+        <p class="about-text">
+          Most platforms show you job listings. CareerPath AI shows you the exact
+          skills you need to reach those roles.
+        </p>
+        <p class="about-text">
+          Instead of randomly learning technologies, you get focused recommendations
+          based on real job data. This saves time, reduces confusion, and gives your
+          learning a clear goal.
+        </p>
+      </section>
+
+      <section class="content dark-section">
+        <h3>Who Is This For?</h3>
+        <ul class="about-features">
+          <li>🎓 Students exploring career paths</li>
+          <li>💼 Professionals planning a role switch</li>
+          <li>📚 Learners who want a clear skill roadmap</li>
+        </ul>
+      </section>
+
+      <section class="content">
+        <h3>Built With</h3>
+        <ul class="about-features">
+          <li>🐍 Python for backend logic and data processing</li>
+          <li>🌐 Flask for web framework and APIs</li>
+          <li>🤖 Machine Learning for skill and job matching</li>
+          <li>🗄️ SQL Database for storing skills, jobs, and users</li>
+          <li>🎨 HTML & CSS for frontend interface</li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <p class="footer-logo">CareerPath AI</p>
+      <p id="year-text">©2025</p>
+      <div class="socials">
+        <a href="#">💼</a>
+        <a href="#">🔗</a>
+        <a href="#">✉️</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
